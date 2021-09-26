@@ -10,7 +10,9 @@ const DB = "mongodb+srv://hutum:_~z4FiRp_nTg6-4@cluster0.v8sh5.mongodb.net/myFir
 mongoose.connect(DB, function(err, db){console.log('database connected'); 
 let info = db.collection('register');                                     
  
-app.get('/', (req,res)=>res.redirect('https://www.youtube.com/watch?v=lY6icfhap2o'))
+app.get('/', function (req, res) {
+  res.sendFile('index.html',{root:__dirname})
+})
 
 server.listen(process.env.PORT || 3001, ()=> {
   console.log("server running...")
