@@ -82,7 +82,7 @@
 </html>
   
      <script>
-         const socket = io('http://wol_register.herokuapp.com')         
+         const socket = io('http://owl-registretion.herokuapp.com')         
          const register = ()=>{  
           const gender = document.querySelector('input[name="genderS"]:checked').value;
                 socket.emit('register', {email:email.value, password:password.value, first_name:first_name.value, last_name:last_name.value, gender:gender})
